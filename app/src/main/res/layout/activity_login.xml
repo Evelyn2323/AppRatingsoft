@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewRoot"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/login1"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="20dp"
+                tools:ignore="ContentDescription"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="RATINGSOFT"
+                android:textStyle="bold">
+
+
+            </TextView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-39dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Correo electrónico"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:src="@drawable/logo_email_mail"
+                android:layout_marginLeft="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                >
+            </ImageView>
+
+            <EditText
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/Correo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:layout_weight="1"
+
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-60dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Contraseña"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@drawable/password"
+                android:layout_marginLeft="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                >
+
+            </ImageView>
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:layout_weight="1"
+
+                android:ems="10"
+                android:inputType="textPassword" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_marginTop="30sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/button"
+                android:layout_width="255dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:text="Seguir" />
+
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
