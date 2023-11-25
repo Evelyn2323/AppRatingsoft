@@ -21,15 +21,17 @@
             android:orientation="horizontal"
             android:layout_marginTop="50dp"
             android:layout_gravity="center_horizontal">
+
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
                 android:src="@drawable/login1"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
                 tools:ignore="ContentDescription"/>
+
         </LinearLayout>
+
 
 
 
@@ -43,8 +45,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/titulos"
                 android:textSize="20dp"
-                android:text="RATINGSOFT"
+                android:text="INICIAR SESIÓN "
                 android:textStyle="bold">
 
 
@@ -62,8 +65,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/subtitulos"
                 android:layout_marginLeft="-39dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
+                android:textSize="20dp"
                 android:gravity="center"
                 android:text="Correo electrónico"
                 android:textColor="@color/black"
@@ -91,6 +96,7 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/Correo"
                 android:layout_width="wrap_content"
+                android:textSize="20dp"
                 android:layout_height="wrap_content"
                 android:hint="Correo"
                 android:layout_weight="1"
@@ -108,9 +114,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/subtitulos"
                 android:layout_marginLeft="-60dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
+                android:textSize="20dp"
                 android:text="Contraseña"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -136,6 +144,7 @@
                 android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:hint="Contraseña"
                 android:layout_weight="1"
 
@@ -154,10 +163,12 @@
             <Button
                 android:textColor="@color/white"
                 android:id="@+id/button"
+                android:fontFamily="@font/titulos"
                 android:layout_width="255dp"
                 android:layout_height="46dp"
+                android:textSize="20dp"
                 android:layout_weight="1"
-                android:text="Seguir" />
+                android:text="Ingresar" />
 
 
         </LinearLayout>
