@@ -60,27 +60,11 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-<<<<<<< HEAD
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:background="@drawable/rounded_background"
          >
-=======
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:ems="15"
-            android:background="@color/beige"
-            android:orientation="vertical"
-            app:boxBackgroundMode="outline"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:errorEnabled="true"
-            app:errorIconDrawable="@null">
->>>>>>> 154053b8e9ae5160d1e06151997ccf8b22625ed0
 
             <TextView
                 android:id="@+id/username"
@@ -137,8 +121,7 @@
             app:boxCornerRadiusTopStart="10dp"
             app:errorEnabled="true"
             app:errorIconDrawable="@null"
-            app:hintAnimationEnabled="true"
-            android:background="@color/beige">
+            app:hintAnimationEnabled="true">
 
             <TextView
                 android:id="@+id/Correo"
