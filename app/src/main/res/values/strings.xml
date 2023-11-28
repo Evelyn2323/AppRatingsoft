@@ -1,14 +1,21 @@
 <resources>
-    <string name="app_name">AppRatingsoft</string>
+    <string name="app_name">Ratingsoft</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Gestión de Calificaciones</string>
+    <string name="nav_header_subtitle">ratingsoft@software.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="salir">Salir de la aplicación</string>
+    <string name="modo">Cambiar a modo oscuro</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+
+
+
+    <string name="menu_home">Ratingsoft</string>
+    <string name="menu_gallery">Perfil</string>
+    <string name="menu_slideshow">Tipo Asignatura</string>
+    <string name="notas">Notas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ratingsoft</string>
 </resources>
