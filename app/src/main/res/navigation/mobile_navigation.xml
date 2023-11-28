@@ -13,19 +13,31 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.appratingsoft.ui.gallery.GalleryFragment"
+        android:name="com.example.appratingsoft.ui.personas.PersonasFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_personas" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.appratingsoft.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:name="com.example.appratingsoft.ui.TipoAsignatura.TipoAsignaturaFragment"
+        android:label="Tipo Asignatura"
+        tools:layout="@layout/fragment_tipoasignaturas" />
 
+    <fragment
+        android:id="@+id/notas"
+        android:name="com.example.appratingsoft.ui.notas.NotasFragment"
+        android:label="Notas"
+        tools:layout="@layout/fragment_notas" />
     <fragment
         android:id="@+id/nav_slideshow2"
         android:name="com.example.appratingsoft.ui.cursos.CursosFragment"
-        android:label="cursos"
+        android:label="Cursos"
         tools:layout="@layout/fragment_cursos" />
+
+
+    <fragment
+        android:id="@+id/user"
+        android:name="com.example.appratingsoft.ui.perfil.PerfilFragment"
+        android:label="perfil"
+        tools:layout="@layout/activity_edit_perfil" />
 </navigation>

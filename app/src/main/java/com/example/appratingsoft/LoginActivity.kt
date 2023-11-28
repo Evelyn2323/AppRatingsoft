@@ -16,7 +16,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginActivity : AppCompatActivity() {
+class
+LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private val toast = PopupAlert()
 
@@ -26,16 +27,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         clickListener()
-
-//        binding.Newcuenta.setOnClickListener {
-//            toast.toastSuccess(this, "Senakitch", "Registro de usuario")
-//            startActivity(Intent(this, activity_registro2::class.java))
-//        }
-//
-//        binding.newcuenta.setOnClickListener{
-//            toast.toastSuccess(this, "Senakitch", "Olvide mi contraseña")
-//            startActivity(Intent(this, activity_registro2::class.java))
-//        }
 
     }//Fin
 

@@ -2,6 +2,6 @@ package com.example.ratingsoft.data.Model.bring
 
 
 data class tipoAsignaturasBring(
-    val nombre:String,
+    val nombreTipoAsignatura:String,
      val descripcion:String
 )

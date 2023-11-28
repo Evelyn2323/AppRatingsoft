@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appratingsoft.R
 import com.example.appratingsoft.databinding.FragmentCursosBinding
+import com.example.appratingsoft.ui.notas.NotasViewModel
 
 class CursosFragment : Fragment() {
 

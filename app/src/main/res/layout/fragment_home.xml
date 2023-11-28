@@ -1,22 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Contenido Medio -->
+    <LinearLayout
+        android:id="@+id/llContentMiddle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMiddleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Descripción -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMiddleDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <!-- Imagen -->
+        <ImageView
+            android:id="@+id/ivMiddleImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/tvMiddleDescription"/>
+    </LinearLayout>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <GridLayout
+        android:id="@+id/footerGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:rowCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="-16dp">
+
+        <!-- ... Tus TextViews aquí ... -->
+
+
+
+        <TextView
+            android:id="@+id/tvCopyright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/titulos"
+            android:gravity="center"
+            android:text="© 2023 RATINGSOFT. Todos los derechos reservados. ratingsoft@gmail.com" />
+    </GridLayout>
+
+
+    <!-- Contenido Medio -->
+    <LinearLayout
+        android:id="@+id/llContentMiddle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/footerGridLayout2">
+
+    <!-- Título -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMiddleTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RATINGSOFT"
+        android:padding="15dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <!-- Descripción -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMiddleDescription2"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/textos"
+        android:layout_margin="20dp"
+        android:padding="2dp"
+        android:layout_height="wrap_content"
+        android:text="RATINGSOFT Contribuir en el proceso del manejo de calificaciones de una institución educativa, mediante un sistema de información que permite el manejo y almacenamiento de calificaciones de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el rendimiento académico."/>
+
+    <!-- Imagen -->
+    <ImageView
+        android:id="@+id/ivMiddleImage2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo2"/>
+</LinearLayout>
+
+
+    <!-- Footer -->
+    <GridLayout
+        android:id="@+id/footerGridLayout2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:orientation="horizontal"
+        android:padding="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/llContentMiddle1">
+
+
+
+
+
+    </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
