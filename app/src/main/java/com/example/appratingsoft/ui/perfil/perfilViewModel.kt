@@ -35,7 +35,27 @@ class perfilViewModel : ViewModel() {
 
     fun fetchUserProfile() {
         val userId = UserAdmin.getUserId()
-       // getUserProfile(userId.toString())
+        getUserProfile(userId.toString())
+    }
+
+    private fun getUserProfile(userId: String) {
+        val apiService = ApiConexion.getApiService()
+
+        val userProfileCall: Call<User> = apiService.getUserProfile(userId)
+        userProfileCall.enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                if (response.isSuccessful) {
+                    val user = response.body()
+                    user?.let {
+                        userById.value = it
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.e("Error user", t.toString())
+            }
+        })
     }
 
     fun deleteProfile(userId: String) {

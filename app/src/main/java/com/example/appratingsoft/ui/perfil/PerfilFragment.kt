@@ -42,8 +42,8 @@ class PerfilFragment : Fragment() {
         // Data of user
         editPerfilModel.user.observe(viewLifecycleOwner) { newData ->
 
-            //binding.username.text = newData.name
-           // binding.Correo.text = newData.email
+            binding.username.text = newData.name
+            binding.Correo.text = newData.email
         }
 
         binding.edit.setOnClickListener {
