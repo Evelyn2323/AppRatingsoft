@@ -62,6 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:ems="15"
+            android:background="@color/beige"
             android:orientation="vertical"
             app:boxBackgroundMode="outline"
             app:boxCornerRadiusBottomEnd="10dp"
@@ -118,7 +119,8 @@
             app:boxCornerRadiusTopStart="10dp"
             app:errorEnabled="true"
             app:errorIconDrawable="@null"
-            app:hintAnimationEnabled="true">
+            app:hintAnimationEnabled="true"
+            android:background="@color/beige">
 
             <TextView
                 android:id="@+id/Correo"
