@@ -71,8 +71,9 @@
             app:errorEnabled="true"
             app:errorIconDrawable="@null">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/username"                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/subtitulos"
                 android:inputType="textPersonName"
@@ -119,7 +120,7 @@
             app:errorIconDrawable="@null"
             app:hintAnimationEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
                 android:id="@+id/Correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -9,6 +9,7 @@ import com.example.appratingsoft.ApiService.ApiService
 import com.example.appratingsoft.Conexion.ApiConexion
 import com.example.ratingsoft.data.Model.send.User
 import com.example.ratingsoft.data.Model.send.UserAdmin
+import com.example.ratingsoft.data.Model.send.UserB
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -86,30 +87,30 @@ class PerfilModel: ViewModel() {
         })
     }
 
-//    private val _updateProfileResult = MutableLiveData<Boolean>()
-//    val updateProfileResult: LiveData<Boolean> get() = _updateProfileResult
-//
-//    fun updateProfile(userRequest: UserBring, userId: String) {
-//        val apiService = ApiConnection.getApiService()
-//
-//        val userProfileCall: Call<User> = apiService.updateProfile(userRequest, userId)
-//        userProfileCall.enqueue(object : Callback<User> {
-//            override fun onResponse(call: Call<User>, response: Response<User>) {
-//                if (response.isSuccessful) {
-//                    _updateProfileResult.value = true
-//
-//
-//                } else {
-//                    _updateProfileResult.value = false
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<User>, t: Throwable) {
-////                Log.e("Error de actualización de perfil", "Error actualizando el perfil del usuario", t)
-//                _updateProfileResult.value = false
-//            }
-//        })
-//    }
+    private val _updateProfileResult = MutableLiveData<Boolean>()
+    val updateProfileResult: LiveData<Boolean> get() = _updateProfileResult
+
+    fun updateProfile(userRequest: UserB, userId: String) {
+        val apiService = ApiConexion.getApiService()
+
+        val userProfileCall: Call<User> = apiService.updateProfile(userRequest, userId)
+        userProfileCall.enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                if (response.isSuccessful) {
+                    _updateProfileResult.value = true
+
+
+                } else {
+                    _updateProfileResult.value = false
+                }
+            }
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+//                Log.e("Error de actualización de perfil", "Error actualizando el perfil del usuario", t)
+                _updateProfileResult.value = false
+            }
+        })
+    }
 
 
 
