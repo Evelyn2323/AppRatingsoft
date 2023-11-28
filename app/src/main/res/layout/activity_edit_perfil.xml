@@ -5,7 +5,7 @@
     android:id="@+id/viewRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo2"
+    android:background="@drawable/img"
     android:orientation="vertical"
     tools:context=".EditPerfilActivity"
     >
@@ -45,6 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Nombre del usuario"
+            android:padding="8dp"
+            android:background="@drawable/rounded_background"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -58,29 +60,27 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:ems="15"
-            android:orientation="vertical"
-            app:boxBackgroundMode="outline"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:errorEnabled="true"
-            app:errorIconDrawable="@null">
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_background"
+         >
 
             <TextView
                 android:id="@+id/username"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:fontFamily="@font/subtitulos"
-                android:inputType="textPersonName"
+                android:inputType="textEmailAddress"
+                android:padding="3dp"
                 android:text="Ingrese su nombre"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textColorHint="@color/white" />
+                android:textColorHint="@color/black"
+                android:textSize="15dp" />
         </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -92,11 +92,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correo electrónico del usuario"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_background"
             android:textColor="@color/black"
+            android:text="Correo electrónico del usuario"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp" />
+            android:textStyle="bold" />
+
         <ImageView
             android:layout_marginLeft="5dp"
             android:layout_width="50dp"
@@ -122,10 +125,16 @@
 
             <TextView
                 android:id="@+id/Correo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:padding="3dp"
+                android:textSize="15dp"
                 android:fontFamily="@font/subtitulos"
                 android:text="Ingrese su nombre"
+                android:background="@drawable/rounded_background"
+
                 android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
