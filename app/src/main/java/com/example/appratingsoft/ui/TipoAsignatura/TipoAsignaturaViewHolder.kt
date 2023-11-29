@@ -32,7 +32,7 @@ class TipoAsignaturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.description.text = contentModel.descripcion
 
         clickListener()
-//        clickListener2()
+
     }
 
     private fun clickListener() {
@@ -69,25 +69,5 @@ class TipoAsignaturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         }
     }
 
-//    private fun clickListener2() {
-//        binding.botonEditar.setOnClickListener {
-//            Log.d(TAG, "EDITANDO... $idabc")
-//
-//            // Aquí deberías construir un objeto TipoAsignaturaSend con los datos actuales
-//            val tipoAsignaturaSend = tipoAsignaturasSend(
-//                idabc,
-//                binding.title.text.toString(),
-//                binding.description.text.toString()
-//            )
-//
-//            // Obtén el contexto desde la vista
-//            val context = binding.root.context
-//
-//            // Abre la pantalla de edición y pasa el objeto tipoAsignaturaSend
-//            val intent = Intent(context, EditTipoAsignaturaActivity::class.java)
-//            intent.putExtra("TIPO_ASIGNATURA", tipoAsignaturaSend)
-//            context.startActivity(intent)
-//        }
-//    }
 }
 

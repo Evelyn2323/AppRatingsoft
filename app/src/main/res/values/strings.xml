@@ -10,10 +10,12 @@
     <string name="modo">Cambiar a modo oscuro</string>
 
 
-
+    <string name="prefs_file">com.example.appratingsoft PREFERENCE_FILE_KEY</string>
 
     <string name="menu_home">Ratingsoft</string>
-    <string name="menu_gallery">Perfil</string>
+    <string name="menu_gallery">Usuarios</string>
+
+    <string name="perfil">Perfil</string>
     <string name="menu_slideshow">Tipo Asignatura</string>
     <string name="notas">Notas</string>
     <!-- TODO: Remove or change this placeholder text -->

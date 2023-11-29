@@ -81,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="holi"
+                android:padding="20dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"
                 android:textSize="14sp"

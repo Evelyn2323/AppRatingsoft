@@ -13,7 +13,7 @@
             android:id="@+id/user"
             android:icon="@drawable/person"
             android:fontFamily="@font/titulos"
-            android:title="@string/menu_gallery" />
+            android:title="@string/perfil" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/asignatur"
@@ -30,10 +30,15 @@
             android:icon="@drawable/notas"
             android:title="Notas" />
         <item
-            android:id="@+id/personas"
+            android:id="@+id/nav_gallery2"
             android:fontFamily="@font/titulos"
             android:icon="@drawable/users"
             android:title="Usuarios" />
+        <item
+            android:id="@+id/config"
+            android:fontFamily="@font/titulos"
+            android:icon="@drawable/setting"
+            android:title="Salir"/>
 
     </group>
 </menu>
