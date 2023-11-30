@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AppRatingsoft"
         tools:targetApi="31">
         <activity
+            android:name=".PagBottonActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditPerfilActivity"
             android:exported="false" />
         <activity
