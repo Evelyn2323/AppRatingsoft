@@ -6,12 +6,17 @@
     <string name="nav_header_title">Gestión de Calificaciones</string>
     <string name="nav_header_subtitle">ratingsoft@software.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="salir">Salir de la aplicación</string>
+    <string name="salir"></string>
     <string name="modo">Cambiar a modo oscuro</string>
 
 
+    <string name="prefs_file">com.example.appratingsoft PREFERENCE_FILE_KEY</string>
+
+
     <string name="menu_home">Ratingsoft</string>
-    <string name="menu_gallery">Perfil</string>
+    <string name="menu_gallery">Usuarios</string>
+
+    <string name="perfil">Perfil</string>
     <string name="menu_slideshow">Tipo Asignatura</string>
     <string name="notas">Notas</string>
     <!-- TODO: Remove or change this placeholder text -->

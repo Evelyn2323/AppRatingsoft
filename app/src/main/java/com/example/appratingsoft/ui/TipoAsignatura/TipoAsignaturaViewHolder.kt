@@ -32,7 +32,7 @@ class TipoAsignaturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.description.text = contentModel.descripcion
 
         clickListener()
-//        clickListener2()
+
     }
 
     private fun clickListener() {

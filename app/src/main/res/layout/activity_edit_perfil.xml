@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/img"
     android:orientation="vertical"
-    tools:context=".EditPerfilActivity"
-    >
+    tools:context=".EditPerfilActivity">
 
     <LinearLayout
         android:id="@+id/layout_edit_profile"
@@ -40,132 +39,118 @@
             app:civ_border_color="@color/Azul"
             app:civ_border_width="1dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="Nombre del usuario"
-            android:padding="8dp"
-            android:background="@drawable/rounded_background"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/person"
-            android:backgroundTint="@color/Azul"></ImageView>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="250dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_background"
-         >
-
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/subtitulos"
-                android:inputType="textEmailAddress"
-                android:padding="3dp"
-                android:text="Ingrese su nombre"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal|center_vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:padding="8dp"
-            android:background="@drawable/rounded_background"
-            android:textColor="@color/black"
-            android:text="Correo electrónico del usuario"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_marginLeft="5dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/Azul"
-            android:background="@drawable/email">
-        </ImageView>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:ems="15"
-            android:orientation="vertical"
-            app:boxBackgroundMode="outline"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:errorEnabled="true"
-            app:errorIconDrawable="@null"
-            app:hintAnimationEnabled="true">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/Correo"
-                android:layout_width="250dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:padding="3dp"
-                android:textSize="15dp"
-                android:fontFamily="@font/subtitulos"
-                android:text="Ingrese su nombre"
-                android:background="@drawable/rounded_background"
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/person"
+                android:backgroundTint="@color/Azul" />
 
-                android:inputType="textEmailAddress"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:ems="15"
+                android:orientation="vertical"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@null"
+                app:hintAnimationEnabled="true">
 
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/subtitulos"
+                    android:text="Ingrese su nombre"
+                    android:background="@drawable/rounded_background"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="80dp"
-            >
+            android:gravity="center_vertical">
 
-            <Button
-                android:id="@+id/edit"
-                android:backgroundTint="@color/Azul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Editar perfil" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/email"
+                android:backgroundTint="@color/Azul" />
 
-            <Button
-                android:id="@+id/delete"
-                android:backgroundTint="@color/rojo"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Eliminar perfil" />
+                android:layout_margin="10sp"
+                android:ems="15"
+                android:orientation="vertical"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@null"
+                app:hintAnimationEnabled="true">
+
+                <TextView
+                    android:id="@+id/Correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/subtitulos"
+                    android:text="Ingrese su correo electrónico"
+                    android:background="@drawable/rounded_background"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-
-
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="80dp">
+
+        <Button
+            android:id="@+id/edit"
+            android:backgroundTint="@color/Azul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar perfil" />
+
+        <Button
+            android:id="@+id/delete"
+            android:backgroundTint="@color/rojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar perfil" />
+    </LinearLayout>
+</LinearLayout>

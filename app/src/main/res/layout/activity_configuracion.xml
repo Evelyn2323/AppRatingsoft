@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gris"
+    tools:context=".ConfiguracionFragment">
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/beige"-->
+<!--        android:elevation="1dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_scrollFlags="scroll|enterAlways">-->
+
+<!--        &lt;!&ndash; Flecha de atrás &ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButtonBackPerfil"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:src="@drawable/setting"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        &lt;!&ndash; Título del evento &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvEvento"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:text="Configuración"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/imageButtonBackPerfil"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/imageButtonBackPerfil" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/scrollView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="?attr/colorTertiary"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="?attr/colorTertiary">>-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/tvCerrarSesion"-->
+<!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:drawableEnd="@drawable/setting"-->
+<!--                android:text="Cerrar Sesión "-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="?attr/colorPrimary"-->
+<!--                android:textStyle="bold"-->
+<!--                tools:layout_editor_absoluteX="157dp"-->
+<!--                tools:layout_editor_absoluteY="246dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvGeneral"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="68dp"-->
+<!--                android:fontFamily="@font/hurmebold"-->
+<!--                android:text="General"-->
+<!--                android:textSize="16dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="60dp"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--        </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/CardNotificaciones"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="20dp"-->
+
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:orientation="horizontal">-->
+
+
+
+<!--                        <Switch-->
+<!--                            android:id="@+id/notificationSwitch"-->
+<!--                            android:gravity="end"-->
+<!--                            android:checked="true"-->
+<!--                            android:layout_marginEnd="70dp"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content" />-->
+
+<!--                    </LinearLayout>-->
+
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/darker_gray"-->
+<!--                        android:gravity="center_horizontal" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvTema"-->
+<!--                        android:fontFamily="@font/titulos"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="15dp"-->
+
+<!--                        android:paddingBottom="10dp"-->
+<!--                        android:text="Tema Nocturno" />-->
+
+<!--                    <Switch-->
+<!--                        android:id="@+id/temaNocturnoSwitch"-->
+<!--                        android:gravity="end"-->
+<!--                        android:layout_marginEnd="70dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/darker_gray"-->
+<!--                        android:gravity="center_horizontal" />-->
+
+
+
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvInfo"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:fontFamily="@font/hurmebold"-->
+<!--                    android:text="Acerca de:"-->
+<!--                    android:textSize="16dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/CardNotificaciones" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/CardAcercaDe"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="20dp"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/tvInfo">-->
+
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/tvPoliticaPrivacidad"-->
+<!--                        android:fontFamily="@font/titulos"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Política de Privacidad" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/darker_gray"-->
+<!--                        android:gravity="center_horizontal" />-->
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/tvTerminosServicio"-->
+
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Términos de Servicio" />-->
+
+<!--                </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
