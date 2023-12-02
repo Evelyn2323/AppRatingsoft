@@ -1,73 +1,76 @@
 package com.example.appratingsoft.ui.TipoAsignatura
 
-import android.content.Intent
 import android.util.Log
 import android.view.View
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appratingsoft.ClassImport.PopupAlert
 import com.example.appratingsoft.Conexion.ApiConexion
-import com.example.appratingsoft.EditTipoAsignaturaActivity
-
 import com.example.appratingsoft.databinding.ItemTipoasignaturasBinding
-import com.example.appratingsoft.tipoAsignatura_activity
 import com.example.ratingsoft.data.Model.send.tipoAsignaturasSend
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class TipoAsignaturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
+    // Binding para acceder a los elementos de la interfaz de usuario
     private val binding: ItemTipoasignaturasBinding = ItemTipoasignaturasBinding.bind(view)
+
+    // Instancia de PopupAlert para mostrar alertas
     private val toast = PopupAlert()
+
+    // Etiqueta de registro para la depuración
     private val TAG = "MyActivity"
+
+    // Variable para almacenar el ID actual
     private var idabc = "0"
 
-
+    // Función para renderizar los datos en la interfaz de usuario
     fun render(contentModel: tipoAsignaturasSend) {
-        idabc = contentModel.id;
+        // Obtener el ID y establecer valores en los elementos de la interfaz de usuario
+        idabc = contentModel.id
         binding.title.text = contentModel.id
         binding.title.text = contentModel.nombreTipoAsignatura
         binding.description.text = contentModel.descripcion
 
+        // Configurar el listener de clic
         clickListener()
-
     }
 
+    // Función para configurar el listener de clic en el botón eliminar
     private fun clickListener() {
         binding.botonEliminar.setOnClickListener {
-            Log.d(TAG, "ELIMINANDO..." + idabc)
+            // Registro de información sobre la eliminación
+            Log.d(TAG, "ELIMINANDO... $idabc")
 
-            val apiGetContent = ApiConexion.getApiService().deletetipoAsignaturas(idabc)
-
+            // Llamada a la API para eliminar un tipo de asignatura
             val apiService = ApiConexion.getApiService()
-
             val deleteUserCall: Call<Void> = apiService.deletetipoAsignaturas(idabc)
+
+            // Manejo de la respuesta de la llamada a la API
             deleteUserCall.enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
                         // Eliminación exitosa
-                        Log.d("User deletion", "User deleted successfully")
-                        //_deleteUserResult.value = true
+                        Log.d("TipoAsignatura deletion", "TipoAsignatura deleted successfully")
                     } else {
                         // Manejar errores en la respuesta, si es necesario
                         Log.e(
-                            "User deletion",
-                            "Failed to delete user. Response code: ${response.code()}"
+                            "TipoAsignatura deletion",
+                            "Failed to delete TipoAsignatura. Response code: ${response.code()}"
                         )
-                        // _deleteUserResult.value = false
+                        // Muestra una alerta de error
+                        toast.toastError(itemView.context, "Error", "Error eliminando TipoAsignatura")
                     }
                 }
 
                 override fun onFailure(call: Call<Void>, t: Throwable) {
                     // Manejar errores en la solicitud, si es necesario
-                    Log.e("User deletion", "Error deleting user", t)
-                    // _deleteUserResult.value = false
+                    Log.e("TipoAsignatura deletion", "Error deleting TipoAsignatura", t)
+                    // Muestra una alerta de error
+                    toast.toastError(itemView.context, "Error", "Error eliminando TipoAsignatura")
                 }
             })
         }
     }
-
 }
-

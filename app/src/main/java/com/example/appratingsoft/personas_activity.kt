@@ -10,6 +10,8 @@ class personas_activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Establece el diseño de la actividad a partir del archivo de diseño activity_cursos
+
         setContentView(R.layout.activity_personas)
     }
 }

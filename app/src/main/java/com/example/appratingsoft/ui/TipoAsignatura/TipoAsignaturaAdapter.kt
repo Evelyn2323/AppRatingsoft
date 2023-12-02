@@ -19,4 +19,16 @@ class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasSend>) 
         val item = contentList[position]
         holder.render(item)
     }
+
+
+    private var listaDeDatos: List<tipoAsignaturasSend> = listOf()
+
+    fun setData(newData: List<tipoAsignaturasSend>) {
+        listaDeDatos = newData
+        notifyDataSetChanged()
+    }
+
+
 }
+
+

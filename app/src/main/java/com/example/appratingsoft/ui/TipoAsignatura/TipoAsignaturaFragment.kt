@@ -14,13 +14,12 @@ import com.example.appratingsoft.databinding.FragmentCursosBinding
 
 class TipoAsignaturaFragment : Fragment() {
 
+    // Declaraciones de variables
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: TipoAsignaturaAdapter
-
     private var _binding: FragmentCursosBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    // Esta propiedad solo es válida entre onCreateView y onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,14 +28,19 @@ class TipoAsignaturaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val homeViewModel =
+        // Crear una instancia del ViewModel
+        val tipoAsignaturaViewModel =
             ViewModelProvider(this)[TipoAsignaturaViewModel::class.java]
 
+        // Inflar y obtener la vista raíz del fragmento
         _binding = FragmentCursosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // Obtener una referencia al TextView en el diseño
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+
+        // Observar el texto del ViewModel y actualizar el TextView
+        tipoAsignaturaViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 
@@ -46,12 +50,16 @@ class TipoAsignaturaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Configurar el RecyclerView y el adaptador
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val homeViewModel = ViewModelProvider(this)[TipoAsignaturaViewModel::class.java]
+        // Crear una instancia del ViewModel
+        val tipoAsignaturaViewModel =
+            ViewModelProvider(this)[TipoAsignaturaViewModel::class.java]
 
-        homeViewModel.contentData.observe(viewLifecycleOwner) { newData ->
+        // Observar los datos del ViewModel y actualizar el adaptador
+        tipoAsignaturaViewModel.contentData.observe(viewLifecycleOwner) { newData ->
             adapter = TipoAsignaturaAdapter(newData)
             recyclerView.adapter = adapter
         }

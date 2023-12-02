@@ -15,29 +15,36 @@ import retrofit2.Response
 
 class perfilViewModel : ViewModel() {
 
+    // LiveData para texto (puede ser eliminado si no se utiliza)
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"
     }
     val text: LiveData<String> = _text
 
+    // LiveData para los datos del usuario
     private val userById = MutableLiveData<User>()
     val user: LiveData<User> get() = userById
 
+    // LiveData para el resultado de eliminación de usuario
     private val _deleteUserResult = MutableLiveData<Boolean>()
     val deleteUserResult: LiveData<Boolean> get() = _deleteUserResult
 
+    // LiveData para el resultado de actualización de perfil
     private val _updateProfileResult = MutableLiveData<Boolean>()
     val updateProfileResult: LiveData<Boolean> get() = _updateProfileResult
 
+    // Inicialización al obtener el perfil del usuario al inicio
     init {
         fetchUserProfile()
     }
 
+    // Función para obtener y actualizar los datos del perfil del usuario
     fun fetchUserProfile() {
         val userId = UserAdmin.getUserId()
         getUserProfile(userId.toString())
     }
 
+    // Función para obtener los datos del perfil del usuario por ID
     private fun getUserProfile(userId: String) {
         val apiService = ApiConexion.getApiService()
 
@@ -58,6 +65,7 @@ class perfilViewModel : ViewModel() {
         })
     }
 
+    // Función para eliminar el perfil del usuario
     fun deleteProfile(userId: String) {
         val apiService = ApiConexion.getApiService()
 
@@ -77,6 +85,7 @@ class perfilViewModel : ViewModel() {
         })
     }
 
+    // Función para actualizar el perfil del usuario
     fun updateProfile(userRequest: UserB, userId: String) {
         val apiService = ApiConexion.getApiService()
 

@@ -1,7 +1,6 @@
 package com.example.appratingsoft.ui.perfil
 
 import android.util.Log
-import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,29 +13,32 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PerfilModel: ViewModel() {
+class PerfilModel : ViewModel() {
 
-
-
+    // Inicialización al obtener el ID del usuario al inicio
     init {
         val userId = UserAdmin.getUserId()
         Log.e("IDUSER", "${userId}")
         getUserProfile(userId.toString())
     }
 
+    // LiveData para texto (puede ser eliminado si no se utiliza)
     private val _text = MutableLiveData<String>().apply {
         value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
 
+    // LiveData para los datos del usuario
     private val userById = MutableLiveData<User>()
     val user: LiveData<User> get() = userById
 
+    // Función para obtener y actualizar los datos del perfil del usuario
     fun fetchUserProfile() {
         val userId = UserAdmin.getUserId()
         getUserProfile(userId.toString())
     }
 
+    // Función para obtener los datos del perfil del usuario por ID
     private fun getUserProfile(userId: String) {
         val apiService = ApiConexion.getApiService()
 
@@ -50,15 +52,18 @@ class PerfilModel: ViewModel() {
                     }
                 }
             }
+
             override fun onFailure(call: Call<User>, t: Throwable) {
                 Log.e("Error user", t.toString())
             }
         })
     }
 
+    // LiveData para el resultado de eliminación de usuario
     private val _deleteUserResult = MutableLiveData<Boolean>()
     val deleteUserResult: LiveData<Boolean> get() = _deleteUserResult
 
+    // Función para eliminar el perfil del usuario
     fun deleteUser(userId: String) {
         val apiService = ApiConexion.getApiService()
 
@@ -87,9 +92,11 @@ class PerfilModel: ViewModel() {
         })
     }
 
+    // LiveData para el resultado de actualización de perfil
     private val _updateProfileResult = MutableLiveData<Boolean>()
     val updateProfileResult: LiveData<Boolean> get() = _updateProfileResult
 
+    // Función para actualizar el perfil del usuario
     fun updateProfile(userRequest: UserB, userId: String) {
         val apiService = ApiConexion.getApiService()
 
@@ -98,8 +105,6 @@ class PerfilModel: ViewModel() {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if (response.isSuccessful) {
                     _updateProfileResult.value = true
-
-
                 } else {
                     _updateProfileResult.value = false
                 }
@@ -111,13 +116,4 @@ class PerfilModel: ViewModel() {
             }
         })
     }
-
-
-
-
-
-
-
-
-
 }

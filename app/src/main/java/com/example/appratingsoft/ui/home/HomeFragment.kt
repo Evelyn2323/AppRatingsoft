@@ -1,4 +1,5 @@
 package com.example.appratingsoft.ui.home
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,8 @@ import com.example.appratingsoft.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
+
+    // Usar el binding creado para acceder a los elementos de la interfaz de usuario
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +21,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Puedes configurar tus TextViews aquí usando binding.tvTechnologies, binding.tvCreators, etc.
+
 
         return root
     }

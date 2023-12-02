@@ -18,8 +18,7 @@ class ConfiguracionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Asociar el clic del botón de configuración con la acción de salir
-      //  imageButtonBackPerfil.setOnClickListener {
+        //sale de la apk
             activity?.finish()
         }
     }

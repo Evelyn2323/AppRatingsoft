@@ -20,8 +20,7 @@ class CursosFragment : Fragment() {
 
     private var _binding: FragmentCursosBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    // Esta propiedad es solo válida entre onCreateView y onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,14 +29,15 @@ class CursosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val homeViewModel =
+        // Inicializar el ViewModel específico para Cursos
+        val cursosViewModel =
             ViewModelProvider(this)[CursosViewModel::class.java]
 
         _binding = FragmentCursosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        cursosViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 
@@ -50,9 +50,11 @@ class CursosFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val homeViewModel = ViewModelProvider(this)[CursosViewModel::class.java]
+        // Obtener el ViewModel específico para Cursos
+        val cursosViewModel = ViewModelProvider(this)[CursosViewModel::class.java]
 
-        homeViewModel.contentData.observe(viewLifecycleOwner) { newData ->
+        // Observar los cambios en los datos y actualizar el adaptador
+        cursosViewModel.contentData.observe(viewLifecycleOwner) { newData ->
             adapter = CursosAdapter(newData)
             recyclerView.adapter = adapter
         }

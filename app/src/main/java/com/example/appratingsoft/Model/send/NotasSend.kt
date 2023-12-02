@@ -1,6 +1,8 @@
 package com.example.ratingsoft.data.Model.send
 
 
+
+
 data class NotasSend (
     val id:String,
     val fecha:String,
