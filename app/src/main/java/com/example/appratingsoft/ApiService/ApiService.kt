@@ -1,14 +1,14 @@
 package com.example.appratingsoft.ApiService
 
-import com.example.appratingsoft.ui.TipoAsignatura.TipoAsignaturaAdapter
 import com.example.ratingsoft.data.Model.bring.loginBring
+import com.example.ratingsoft.data.Model.bring.tipoAsignaturasBring
 import com.example.ratingsoft.data.Model.send.CursosSend
 import com.example.ratingsoft.data.Model.send.NotasSend
 import com.example.ratingsoft.data.Model.send.PersonasSend
 import com.example.ratingsoft.data.Model.send.User
 import com.example.ratingsoft.data.Model.send.UserB
 import com.example.ratingsoft.data.Model.send.loginSend
-import com.example.ratingsoft.data.Model.send.tipoAsignaturasSend
+import com.example.ratingsoft.data.Model.send.tipoAsignaturaSend
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
@@ -30,12 +30,14 @@ interface ApiService {
     @DELETE("/api/users/{userId}")
     fun deleteprofile(@Path("userId") userId: String): Call<Void>
 
+
+
     @GET("/api/tipoAsignaturas")
-    fun getTipoAsignaturas(): Call<List<tipoAsignaturasSend>>
+    fun getTipoAsignaturas(): Call<List<tipoAsignaturasBring>>
     @DELETE("/api/tipoAsignaturas/{tipoAsignaturaId}")
     fun deletetipoAsignaturas(@Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<Void>
     @PUT("/api/tipoAsignaturas/{tipoAsignaturaId}")
-    fun PUTtipoAsignaturas(@Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<Void>
+    fun actuaizarTipoAsignatura(@Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<Void>
 
     @GET("/api/cursos")
     fun getCursos(): Call<List<CursosSend>>

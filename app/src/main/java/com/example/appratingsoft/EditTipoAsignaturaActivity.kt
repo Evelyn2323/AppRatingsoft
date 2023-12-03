@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appratingsoft.databinding.ActivityEditPerfilBinding
 import com.example.appratingsoft.databinding.ActivityTipoAsignaturasBinding
-import com.example.ratingsoft.data.Model.send.tipoAsignaturasSend
+import com.example.ratingsoft.data.Model.send.tipoAsignaturaSend
 
 class EditTipoAsignaturaActivity : AppCompatActivity() {
 
@@ -16,7 +16,7 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Obtener el objeto TipoAsignaturaSend de los extras del Intent
-        val tipoAsignaturaSend = intent.getSerializableExtra("TIPO_ASIGNATURA") as tipoAsignaturasSend
+        val tipoAsignaturaSend = intent.getSerializableExtra("TIPO_ASIGNATURA") as tipoAsignaturaSend
 //        ata class tipoAsignaturasSend (
 //            val id:String,
 //            val nombreTipoAsignatura:String,

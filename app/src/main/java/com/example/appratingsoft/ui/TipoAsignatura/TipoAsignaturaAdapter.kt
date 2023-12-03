@@ -4,10 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appratingsoft.R
-import com.example.ratingsoft.data.Model.send.tipoAsignaturasSend
+import com.example.ratingsoft.data.Model.bring.tipoAsignaturasBring
+import com.example.ratingsoft.data.Model.send.tipoAsignaturaSend
 
 
-class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasSend>) : RecyclerView.Adapter<TipoAsignaturaViewHolder>() {
+class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasBring>) : RecyclerView.Adapter<TipoAsignaturaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):  TipoAsignaturaViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -21,9 +22,9 @@ class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasSend>) 
     }
 
 
-    private var listaDeDatos: List<tipoAsignaturasSend> = listOf()
+    private var listaDeDatos: List<tipoAsignaturasBring> = listOf()
 
-    fun setData(newData: List<tipoAsignaturasSend>) {
+    fun setData(newData: List<tipoAsignaturasBring>) {
         listaDeDatos = newData
         notifyDataSetChanged()
     }

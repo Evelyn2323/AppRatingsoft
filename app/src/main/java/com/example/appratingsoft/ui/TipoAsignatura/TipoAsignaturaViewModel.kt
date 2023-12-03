@@ -5,7 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.appratingsoft.Conexion.ApiConexion
-import com.example.ratingsoft.data.Model.send.tipoAsignaturasSend
+import com.example.ratingsoft.data.Model.bring.tipoAsignaturasBring
+import com.example.ratingsoft.data.Model.send.tipoAsignaturaSend
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,8 +28,8 @@ class TipoAsignaturaViewModel : ViewModel() {
     val text: LiveData<String> = _text
 
     // LiveData para los datos de tipo asignatura
-    private val _contentData = MutableLiveData<List<tipoAsignaturasSend>>()
-    val contentData: LiveData<List<tipoAsignaturasSend>> get() = _contentData
+    private val _contentData = MutableLiveData<List<tipoAsignaturasBring>>()
+    val contentData: LiveData<List<tipoAsignaturasBring>> get() = _contentData
 
     // Función para obtener todos los datos de tipo asignatura desde la API
     private fun getAllContent() {
@@ -37,10 +38,10 @@ class TipoAsignaturaViewModel : ViewModel() {
             // Llamada a la API para obtener los datos de tipo asignatura
             val apiGetContent = ApiConexion.getApiService().getTipoAsignaturas()
 
-            apiGetContent.enqueue(object : Callback<List<tipoAsignaturasSend>> {
+            apiGetContent.enqueue(object : Callback<List<tipoAsignaturasBring>> {
                 override fun onResponse(
-                    call: Call<List<tipoAsignaturasSend>>,
-                    response: Response<List<tipoAsignaturasSend>>
+                    call: Call<List<tipoAsignaturasBring>>,
+                    response: Response<List<tipoAsignaturasBring>>
                 ) {
                     if (response.isSuccessful) {
                         // Obtener la lista de respuestas
@@ -52,7 +53,7 @@ class TipoAsignaturaViewModel : ViewModel() {
                     }
                 }
 
-                override fun onFailure(call: Call<List<tipoAsignaturasSend>>, t: Throwable) {
+                override fun onFailure(call: Call<List<tipoAsignaturasBring>>, t: Throwable) {
                     // Manejar errores en caso de falla en la llamada
                     Log.e("Error content", t.toString())
                 }

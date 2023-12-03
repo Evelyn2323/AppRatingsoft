@@ -9,10 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiConexion {
 
 
-    val baseUrl = "http://192.168.10.21:8000"
+    val baseUrl = "http://192.168.79.29:8000"
 
-
-    //val baseUrl = "http://192.168.79.29:8000"
 
 
     private fun getRetrofit(): Retrofit {
@@ -22,6 +20,10 @@ object ApiConexion {
         val client = OkHttpClient().newBuilder()
             .addInterceptor(logger)
             .build()
+
+
+
+        
 
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())

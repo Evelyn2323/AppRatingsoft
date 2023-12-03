@@ -8,7 +8,6 @@
 
     >
 
-    <!-- Otros elementos del diseño -->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

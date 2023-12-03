@@ -59,8 +59,8 @@ class TipoAsignaturaFragment : Fragment() {
             ViewModelProvider(this)[TipoAsignaturaViewModel::class.java]
 
         // Observar los datos del ViewModel y actualizar el adaptador
-        tipoAsignaturaViewModel.contentData.observe(viewLifecycleOwner) { newData ->
-            adapter = TipoAsignaturaAdapter(newData)
+        tipoAsignaturaViewModel.contentData.observe(viewLifecycleOwner) {
+            adapter = TipoAsignaturaAdapter(it)
             recyclerView.adapter = adapter
         }
     }
