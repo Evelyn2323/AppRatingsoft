@@ -11,14 +11,12 @@ class NotasViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val binding: ItemNotasBinding = ItemNotasBinding.bind(view)
 
-    fun render(contentModel: NotasSend){
-        binding.title.text = contentModel.fecha
+    fun render(contentModel: NotasSend) {
+        // Asigna los valores del modelo a los elementos de la interfaz de usuario
+
         binding.description.text = contentModel.descripcion
-        binding.title.text = contentModel.valor
-        binding.title.text = contentModel.detalle
-
-
+        binding.detalle.text = contentModel.detalle
+        binding.fecha.text = contentModel.fecha
+        binding.valor.text = contentModel.valor
     }
-
-    }
-
+}

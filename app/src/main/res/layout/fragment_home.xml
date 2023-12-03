@@ -31,7 +31,7 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Contenido Medio -->
+
     <LinearLayout
         android:id="@+id/llContentMiddle"
         android:layout_width="match_parent"
@@ -125,6 +125,7 @@
         android:layout_margin="20dp"
         android:padding="2dp"
         android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.4"
         android:text="RATINGSOFT Contribuir en el proceso del manejo de calificaciones de una institución educativa, mediante un sistema de información que permite el manejo y almacenamiento de calificaciones de los estudiantes de una forma digital; tanto el estudiante como acudiente puede visualizar el rendimiento académico."/>
 
     <!-- Imagen -->
