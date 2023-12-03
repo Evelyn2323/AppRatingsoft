@@ -8,7 +8,7 @@ import com.example.ratingsoft.data.Model.bring.tipoAsignaturasBring
 import com.example.ratingsoft.data.Model.send.tipoAsignaturaSend
 
 
-class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasBring>) : RecyclerView.Adapter<TipoAsignaturaViewHolder>() {
+class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasBring>, private val onClickListener:(tipoAsignaturasBring ) -> Unit) : RecyclerView.Adapter<TipoAsignaturaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):  TipoAsignaturaViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -18,7 +18,7 @@ class TipoAsignaturaAdapter(private val contentList: List<tipoAsignaturasBring>)
 
     override fun onBindViewHolder(holder: TipoAsignaturaViewHolder, position: Int) {
         val item = contentList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
 

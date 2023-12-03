@@ -1,5 +1,6 @@
 package com.example.appratingsoft.ui.TipoAsignatura
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appratingsoft.EditTipoAsignaturaActivity
 import com.example.appratingsoft.R
 import com.example.appratingsoft.databinding.FragmentCursosBinding
+import com.example.ratingsoft.data.Model.bring.tipoAsignaturasBring
 
 class TipoAsignaturaFragment : Fragment() {
 
@@ -59,10 +62,21 @@ class TipoAsignaturaFragment : Fragment() {
             ViewModelProvider(this)[TipoAsignaturaViewModel::class.java]
 
         // Observar los datos del ViewModel y actualizar el adaptador
-        tipoAsignaturaViewModel.contentData.observe(viewLifecycleOwner) {
-            adapter = TipoAsignaturaAdapter(it)
-            recyclerView.adapter = adapter
+        tipoAsignaturaViewModel.contentData.observe(viewLifecycleOwner) { tipoAsignaturaResponse ->
+            tipoAsignaturaResponse?.let {
+                adapter = TipoAsignaturaAdapter(it) { selectedTipoAsignatura ->
+                    onItemSelected(selectedTipoAsignatura)
+                }
+                recyclerView.adapter = adapter
+            }
         }
+
+    }
+
+    fun onItemSelected(tipoAsignaturaResponse: tipoAsignaturasBring) {
+        val intent = Intent(requireContext(), EditTipoAsignaturaActivity::class.java)
+        intent.putExtra("TIPOASIGNATURA_ID", tipoAsignaturaResponse.id)
+        startActivity(intent)
     }
 
     override fun onDestroyView() {

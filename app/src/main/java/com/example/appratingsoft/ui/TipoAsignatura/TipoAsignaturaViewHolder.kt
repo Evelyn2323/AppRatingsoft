@@ -27,10 +27,14 @@ class TipoAsignaturaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private var idabc = "0"
 
     // Función para renderizar los datos en la interfaz de usuario
-    fun render(contentModel: tipoAsignaturasBring) {
+    fun render(contentModel: tipoAsignaturasBring, onClickListener:(tipoAsignaturasBring) -> Unit) {
         // Obtener el ID y establecer valores en los elementos de la interfaz de usuario
         binding.title.text = contentModel.nombreTipoAsignatura
         binding.description.text = contentModel.descripcion
+
+        binding.botonEditar.setOnClickListener{
+            onClickListener(contentModel)
+        }
 
         // Configurar el listener de clic
         clickListener(contentModel.id)

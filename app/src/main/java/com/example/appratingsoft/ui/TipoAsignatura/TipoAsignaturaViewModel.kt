@@ -1,10 +1,12 @@
 package com.example.appratingsoft.ui.TipoAsignatura
 
+import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.appratingsoft.Conexion.ApiConexion
+import com.example.appratingsoft.EditTipoAsignaturaActivity
 import com.example.ratingsoft.data.Model.bring.tipoAsignaturasBring
 import com.example.ratingsoft.data.Model.send.tipoAsignaturaSend
 import kotlinx.coroutines.CoroutineScope
@@ -60,4 +62,5 @@ class TipoAsignaturaViewModel : ViewModel() {
             })
         }
     }
+
 }

@@ -34,6 +34,10 @@ interface ApiService {
 
     @GET("/api/tipoAsignaturas")
     fun getTipoAsignaturas(): Call<List<tipoAsignaturasBring>>
+
+    @GET("/api/tipoAsignaturas/{idTipoAsignatura}")
+    fun getTipoAsignaturaById(@Path("idTipoAsignatura") idTipoAsignatura: String): Call<tipoAsignaturasBring>
+
     @DELETE("/api/tipoAsignaturas/{tipoAsignaturaId}")
     fun deletetipoAsignaturas(@Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<Void>
     @PUT("/api/tipoAsignaturas/{tipoAsignaturaId}")
