@@ -28,26 +28,7 @@ class MainActivity : AppCompatActivity() {
         }, 2000) // 2000 milisegundos (2 segundos) de tiempo de espera
     }
 
-    fun showPopupMenu(view: View) {
-        val popupMenu = PopupMenu(this, view)
-        popupMenu.menuInflater.inflate(R.menu.menu, popupMenu.menu)
 
-        popupMenu.setOnMenuItemClickListener { item: MenuItem ->
-            when (item.itemId) {
-                R.id.modo -> {
-                    changeToNightMode()
-                    true
-                }
-                R.id.action_settings -> {
-                    exitApplication()
-                    true
-                }
-                else -> false
-            }
-        }
-
-        popupMenu.show()
-    }
 
     private fun changeToNightMode() {
         // Cambia al modo noche

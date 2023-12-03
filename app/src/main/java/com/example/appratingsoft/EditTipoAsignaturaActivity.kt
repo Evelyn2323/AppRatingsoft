@@ -28,4 +28,5 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
 
         // Agrega el código necesario para manejar la edición y guardar los cambios
     }
+
 }
