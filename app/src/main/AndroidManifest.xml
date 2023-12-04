@@ -17,6 +17,21 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".ui.TipoAsignatura.TipoAsignaturaViewHolder"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TipoAsignatura.TipoAsignaturaViewModel"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TipoAsignatura.TipoAsignaturaAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".CrudPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tipoAsignatura_activity"
+            android:exported="false" />
+        <activity
             android:name=".EditTipoAsignaturaActivity"
             android:exported="false" />
         <activity

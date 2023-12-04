@@ -32,6 +32,9 @@ interface ApiService {
 
 
 
+    @POST("/api/tipoAsignaturas")
+    fun createProduct(@Body productRequest: tipoAsignaturaSend): Call<tipoAsignaturaSend>
+
     @GET("/api/tipoAsignaturas")
     fun getTipoAsignaturas(): Call<List<tipoAsignaturasBring>>
 

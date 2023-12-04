@@ -20,7 +20,6 @@ class AsignaturaViewModel : ViewModel() {
     private val userById = MutableLiveData<tipoAsignaturaSend>()
     val user: LiveData<tipoAsignaturaSend> get() = userById
 
-    //private val tipoasignatura: MutableLiveData<tipoAsignaturasBring>
 
 
     private fun getAsignaturas() {

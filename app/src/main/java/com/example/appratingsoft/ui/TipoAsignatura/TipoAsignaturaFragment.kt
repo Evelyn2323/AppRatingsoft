@@ -75,7 +75,7 @@ class TipoAsignaturaFragment : Fragment() {
 
     }
 
-    fun onItemSelected(tipoAsignaturaResponse: tipoAsignaturasBring) { // voy a ver lo que esta pasando esto aqui
+    fun onItemSelected(tipoAsignaturaResponse: tipoAsignaturasBring) {
         val intent = Intent(requireContext(), EditTipoAsignaturaActivity::class.java)
         intent.putExtra("TIPOASIGNATURA_ID", tipoAsignaturaResponse.id)
         startActivity(intent)

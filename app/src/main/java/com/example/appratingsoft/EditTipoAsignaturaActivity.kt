@@ -76,6 +76,7 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val tipoAsignatura = response.body()
                     tipoAsignatura?.let {
+
                         binding.nameTipoAsignatura.setText(it.nombreTipoAsignatura)
                         binding.description.setText(it.descripcion)
                     }
@@ -138,7 +139,7 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
                         // Solicitud exitosa
                         toast.toastSuccess(
                             this@EditTipoAsignaturaActivity,
-                            "Mis primeros auxilitos",
+                            "Ratingsoft",
                             "Contenido actualizado exitosamente, se revisará lo más pronto posible!!! 😊😊😊😊😊"
                         )
                         startActivity(Intent(applicationContext, MainActivity::class.java))
