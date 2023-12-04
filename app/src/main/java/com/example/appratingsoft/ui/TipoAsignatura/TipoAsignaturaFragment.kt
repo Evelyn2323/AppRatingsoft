@@ -2,6 +2,7 @@ package com.example.appratingsoft.ui.TipoAsignatura
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -65,6 +66,7 @@ class TipoAsignaturaFragment : Fragment() {
         tipoAsignaturaViewModel.contentData.observe(viewLifecycleOwner) { tipoAsignaturaResponse ->
             tipoAsignaturaResponse?.let {
                 adapter = TipoAsignaturaAdapter(it) { selectedTipoAsignatura ->
+                    Log.e("SHIT", "${selectedTipoAsignatura.id}")
                     onItemSelected(selectedTipoAsignatura)
                 }
                 recyclerView.adapter = adapter
@@ -73,7 +75,7 @@ class TipoAsignaturaFragment : Fragment() {
 
     }
 
-    fun onItemSelected(tipoAsignaturaResponse: tipoAsignaturasBring) {
+    fun onItemSelected(tipoAsignaturaResponse: tipoAsignaturasBring) { // voy a ver lo que esta pasando esto aqui
         val intent = Intent(requireContext(), EditTipoAsignaturaActivity::class.java)
         intent.putExtra("TIPOASIGNATURA_ID", tipoAsignaturaResponse.id)
         startActivity(intent)
