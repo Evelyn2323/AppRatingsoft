@@ -41,7 +41,7 @@ interface ApiService {
     @DELETE("/api/tipoAsignaturas/{tipoAsignaturaId}")
     fun deletetipoAsignaturas(@Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<Void>
     @PUT("/api/tipoAsignaturas/{tipoAsignaturaId}")
-    fun actuaizarTipoAsignatura(@Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<Void>
+    fun actualizarTipoAsignatura(@Body body: tipoAsignaturaSend, @Path("tipoAsignaturaId") tipoAsignaturaId: String): Call<tipoAsignaturasBring>
 
     @GET("/api/cursos")
     fun getCursos(): Call<List<CursosSend>>

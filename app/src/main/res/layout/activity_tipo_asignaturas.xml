@@ -30,4 +30,11 @@
         android:hint="Descricion" />
 
 
+    <Button
+        android:id="@+id/updateTipoAsignatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR" />
+
+
 </LinearLayout>
