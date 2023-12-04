@@ -36,9 +36,7 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
 
         getTipoAsignatura(tipoAsignaturaId.toString())
 
-
         sendContentToUpdate()
-
 
     }
 
@@ -94,8 +92,6 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
 
         binding.updateTipoAsignatura.setOnClickListener {
 
-
-
             val title = binding.nameTipoAsignatura.text.toString()
 
             val description = binding.description.text.toString()
@@ -103,12 +99,12 @@ class EditTipoAsignaturaActivity : AppCompatActivity() {
             if (title.isNotEmpty() && description.isNotEmpty()) {
 
                 // Object of content
-                val contentRequest = tipoAsignaturaSend( title, description)
+                val tipoAsignaturaRequest = tipoAsignaturaSend( title, description)
 
                 // Llamar a la función para enviar los datos al servidor
-                if (contentRequest != null) {
-                    Log.e("CONTENT", "$contentRequest")
-                    updateContent(contentRequest)
+                if (tipoAsignaturaRequest != null) {
+                    Log.e("CONTENT", "$tipoAsignaturaRequest")
+                    updateContent(tipoAsignaturaRequest)
                 }
 
             } else {
