@@ -6,7 +6,8 @@
     android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,7 +19,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -35,7 +37,8 @@
                 android:text="Crear nueva tipo asignatura"
                 android:textColor="@color/black"
                 android:textSize="23sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameTipoAsignatura"
@@ -43,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Nombre tipo asignatura"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/description"
@@ -51,20 +55,34 @@
                 android:layout_height="wrap_content"
                 android:hint="Descripcion"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp"/>
 
-            <Button
-                android:id="@+id/btn_upload_content"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Guardar" />
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp">
 
-            <Button
-                android:id="@+id/btn_return"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Regresar" />
+                <Button
+                    android:id="@+id/btn_upload_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"/>
 
+                <Button
+                    android:id="@+id/btn_return"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regresar"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"/>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -22,9 +22,8 @@
         <activity
             android:name=".ui.TipoAsignatura.TipoAsignaturaViewModel"
             android:exported="false" />
-        <activity
-            android:name=".ui.TipoAsignatura.TipoAsignaturaAdapter"
-            android:exported="false" />
+
+
         <activity
             android:name=".CrudPostActivity"
             android:exported="false" />

@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiConexion {
 
 
-    val baseUrl = "http://192.168.79.29:8000"
+    val baseUrl = " http://10.185.208.102:8000"
 
 
 

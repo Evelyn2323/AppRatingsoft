@@ -1,40 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tipoAsignatura_activity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Actualizar tipo asignatura"
-        tools:ignore="MissingConstraints"
-        android:textSize="30sp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarThumbVertical="@drawable/logo"
+        tools:ignore="UselessParent">
 
-    <EditText
-        android:id="@+id/nameTipoAsignatura"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:hint="Nombre tipo asignatura" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:hint="Descricion" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/login1"
+                android:layout_marginTop="0dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actualizar tipo asignatura"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameTipoAsignatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre tipo asignatura"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripcion"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/updateTipoAsignatura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actualizar"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"/>
 
 
-    <Button
-        android:id="@+id/updateTipoAsignatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ACTUALIZAR" />
-
-
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

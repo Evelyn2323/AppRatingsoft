@@ -6,11 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appratingsoft.CrudPostActivity
 import com.example.appratingsoft.EditTipoAsignaturaActivity
 import com.example.appratingsoft.R
 import com.example.appratingsoft.databinding.FragmentCursosBinding
@@ -48,8 +50,19 @@ class TipoAsignaturaFragment : Fragment() {
             textView.text = it
         }
 
+        val buttonCrear: Button = binding.botonCrear
+        buttonCrear.setOnClickListener {
+            // Crear un Intent para el nuevo Activity
+            val intent = Intent(requireContext(), CrudPostActivity::class.java)
+
+            // Iniciar la nueva Activity
+            startActivity(intent)
+        }
+
         return root
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

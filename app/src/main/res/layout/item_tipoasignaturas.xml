@@ -35,16 +35,6 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/asig"
                 tools:ignore="ContentDescription" />
-            <Button
-                android:id="@+id/botonCrear"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:text="Agregar"
-                android:layout_gravity="top|end"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:scaleType="centerCrop"
-                tools:ignore="ContentDescription"/>
 
             <TextView
                 android:id="@+id/title"
@@ -69,27 +59,33 @@
                 android:textSize="14sp"
                 android:textColor="@color/black"
                 android:background="@drawable/rounded_background" />
-            <Button
-                android:id="@+id/botonEliminar"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:text="Eliminar"
-                android:layout_gravity="top|end"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:scaleType="centerCrop"
-                tools:ignore="ContentDescription" />
-            <Button
-                android:id="@+id/botonEditar"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:text="Editar"
-                android:layout_gravity="top|end"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:scaleType="centerCrop"
-                tools:ignore="ContentDescription" />
+                android:layout_marginEnd="8dp">
 
+                <Button
+                    android:id="@+id/botonEliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Eliminar"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+
+
+                <Button
+                    android:id="@+id/botonEditar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editar"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
